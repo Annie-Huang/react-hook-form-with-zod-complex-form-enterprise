@@ -15,6 +15,7 @@ PS C:\react\react-hook-form-with-zod-complex-form-enterprise> npm uninstall @vit
 PS C:\react\react-hook-form-with-zod-complex-form-enterprise> npm install @mui/material @mui/icons-material @mui/lab @mui/x-date-pickers
 PS C:\react\react-hook-form-with-zod-complex-form-enterprise> npm install zustand
 PS C:\react\react-hook-form-with-zod-complex-form-enterprise> npm install react-hook-form
+PS C:\react\react-hook-form-with-zod-complex-form-enterprise> npm install material-ui-popup-state
 
 --------------------------
 Tech stack of the project:
