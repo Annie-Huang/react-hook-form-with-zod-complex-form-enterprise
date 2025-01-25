@@ -11,6 +11,7 @@ PS C:\react\react-hook-form-with-zod-complex-form-enterprise> npm install
 PS C:\react\react-hook-form-with-zod-complex-form-enterprise> npm install react-router
 PS C:\react\react-hook-form-with-zod-complex-form-enterprise> npm install path --save-dev
 PS C:\react\react-hook-form-with-zod-complex-form-enterprise> npm install @vitejs/plugin-react-swc --save-dev
+PS C:\react\react-hook-form-with-zod-complex-form-enterprise> npm uninstall @vitejs/plugin-react
 
 --------------------------
 Tech stack of the project:
