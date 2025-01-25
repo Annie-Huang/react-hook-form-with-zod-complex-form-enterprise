@@ -8,7 +8,7 @@ C:\react\complex-form-enterprise-main   <----- A copy of Code Genix code
 
 PS C:\react> npm create vite@latest react-hook-form-with-zod-complex-form-enterprise -- --template react-ts
 PS C:\react\react-hook-form-with-zod-complex-form-enterprise> npm install
-
+PS C:\react\react-hook-form-with-zod-complex-form-enterprise> npm install react-router
 
 --------------------------
 Tech stack of the project:
