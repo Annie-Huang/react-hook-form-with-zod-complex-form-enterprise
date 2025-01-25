@@ -10,8 +10,16 @@ PS C:\react> npm create vite@latest react-hook-form-with-zod-complex-form-enterp
 PS C:\react\react-hook-form-with-zod-complex-form-enterprise> npm install
 
 
+--------------------------
+Tech stack of the project:
+- React 18
+- Zustand
+- React Hook Form
+- Mui
+
+--------------------------
+
 Form data format - Personal Info:
----------------------------------------
 Phone Number: (555) 555-1234
 
 
