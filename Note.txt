@@ -14,6 +14,7 @@ PS C:\react\react-hook-form-with-zod-complex-form-enterprise> npm install @vitej
 PS C:\react\react-hook-form-with-zod-complex-form-enterprise> npm uninstall @vitejs/plugin-react
 PS C:\react\react-hook-form-with-zod-complex-form-enterprise> npm install @mui/material @mui/icons-material @mui/lab @mui/x-date-pickers
 PS C:\react\react-hook-form-with-zod-complex-form-enterprise> npm install zustand
+PS C:\react\react-hook-form-with-zod-complex-form-enterprise> npm install react-hook-form
 
 --------------------------
 Tech stack of the project:
