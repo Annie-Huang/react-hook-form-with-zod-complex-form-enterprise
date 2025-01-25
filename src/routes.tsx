@@ -4,11 +4,10 @@
 // import { EmployeeReview } from "@/features/employee/review/page";
 // import { EmployeeSkills } from "@/features/employee/skills/page";
 // import { EmployeeWrapper } from "@/features/employee/wrapper/page";
-// import { DashboardLayout } from '@/features/layout/components/dashboard-layout';
-import { DashboardLayout } from './features/layout/components/dashboard-layout.tsx';
+import { DashboardLayout } from '@/features/layout/components/dashboard-layout';
 import { BrowserRouter, Route, Routes } from 'react-router';
 
-const RoutesWrapper = () => {
+export const RoutesWrapper = () => {
   return (
     <BrowserRouter>
       <Routes>
@@ -31,5 +30,3 @@ const RoutesWrapper = () => {
     </BrowserRouter>
   );
 };
-
-export { RoutesWrapper };
