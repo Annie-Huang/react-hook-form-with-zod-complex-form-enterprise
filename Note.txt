@@ -21,6 +21,9 @@ PS C:\react\react-hook-form-with-zod-complex-form-enterprise> npm install materi
 https://stackoverflow.com/questions/74597732/uncaught-syntaxerror-export-import-react3-is-not-defined-in-module-at-chunk
 PS C:\react\react-hook-form-with-zod-complex-form-enterprise> npm install @emotion/react @emotion/styled
 
+PS C:\react\react-hook-form-with-zod-complex-form-enterprise> npm install immer
+
+
 --------------------------
 Tech stack of the project:
 - React 18
