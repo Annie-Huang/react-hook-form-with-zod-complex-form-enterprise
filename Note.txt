@@ -29,6 +29,9 @@ PS C:\react\react-hook-form-with-zod-complex-form-enterprise> npm install react-
 PS C:\react\react-hook-form-with-zod-complex-form-enterprise> npm install @tanstack/react-query
 PS C:\react\react-hook-form-with-zod-complex-form-enterprise> npm install date-fns          <--- required by @mui/x-date-pickers
 
+
+PS C:\react\react-hook-form-with-zod-complex-form-enterprise> npm install @hookform/error-message
+
 --------------------------
 Tech stack of the project:
 - React 18
@@ -39,7 +42,7 @@ Tech stack of the project:
 --------------------------
 
 Form data format - Personal Info:
-Phone Number: (555) 555-1234
+Phone Number: (555) 555-5555
 Social Security Number: 555 55 5555
 
 
