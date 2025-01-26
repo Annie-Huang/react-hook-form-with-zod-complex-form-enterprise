@@ -57,6 +57,7 @@ In Skills page,
 
 In Additional Info page,
 - References components is use useFieldArray.
+- use MUI slider component for salary expectations
 
 
 
