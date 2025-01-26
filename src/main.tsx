@@ -3,8 +3,8 @@ import { RoutesWrapper } from '@/routes';
 import { theme } from '@/utils/theme';
 // import { setupZodErrors } from "@/utils/zodConfig";
 import { ThemeProvider } from '@mui/material';
-// import { LocalizationProvider } from "@mui/x-date-pickers";
-// import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFnsV3";
+import { LocalizationProvider } from '@mui/x-date-pickers';
+import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFnsV3';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 // import { SnackbarProvider } from "notistack";
 import { StrictMode } from 'react';
@@ -16,9 +16,11 @@ createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <QueryClientProvider client={queryClient}>
       <ThemeProvider theme={theme}>
-        <ConfirmProvider>
-          <RoutesWrapper />
-        </ConfirmProvider>
+        <LocalizationProvider dateAdapter={AdapterDateFns}>
+          <ConfirmProvider>
+            <RoutesWrapper />
+          </ConfirmProvider>
+        </LocalizationProvider>
       </ThemeProvider>
     </QueryClientProvider>
   </StrictMode>,
