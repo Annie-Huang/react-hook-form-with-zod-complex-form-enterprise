@@ -52,7 +52,7 @@ In the History page,
 
 In Skills page,
 - if user choose 'other' for Core Completencies, a new field of 'otherCoreCompetencies' is added into zod schema through superRefine
-
+- Each Skill Set has 3 level of drop down and last dropdown is multiple options selection
 
 
 
