@@ -22,7 +22,7 @@ https://stackoverflow.com/questions/74597732/uncaught-syntaxerror-export-import-
 PS C:\react\react-hook-form-with-zod-complex-form-enterprise> npm install @emotion/react @emotion/styled
 
 PS C:\react\react-hook-form-with-zod-complex-form-enterprise> npm install immer
-
+PS C:\react\react-hook-form-with-zod-complex-form-enterprise> npm install zod @hookform/resolvers
 
 --------------------------
 Tech stack of the project:
