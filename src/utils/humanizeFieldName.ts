@@ -1,10 +1,8 @@
-const humanizeFieldName = (field: string | number): string => {
+export const humanizeFieldName = (field: string | number): string => {
   const str = field.toString();
 
   return str
     .split(/(?=[A-Z])/)
-    .join(" ")
+    .join(' ')
     .replace(/^./, (item) => item.toUpperCase());
 };
-
-export { humanizeFieldName };
