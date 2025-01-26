@@ -27,6 +27,7 @@ PS C:\react\react-hook-form-with-zod-complex-form-enterprise> npm install valida
 PS C:\react\react-hook-form-with-zod-complex-form-enterprise> npm install @types/validator --save-dev
 PS C:\react\react-hook-form-with-zod-complex-form-enterprise> npm install react-number-format
 PS C:\react\react-hook-form-with-zod-complex-form-enterprise> npm install @tanstack/react-query
+PS C:\react\react-hook-form-with-zod-complex-form-enterprise> npm install date-fns          <--- required by @mui/x-date-pickers
 
 --------------------------
 Tech stack of the project:
