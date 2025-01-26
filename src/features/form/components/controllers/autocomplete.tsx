@@ -1,30 +1,30 @@
-import { useFormContext } from "@/features/form/hooks/useFormContext";
-import { d } from "@/utils/dictionary";
+import { useFormContext } from '@/features/form/hooks/useFormContext';
+import { d } from '@/utils/dictionary';
 import {
   AutocompleteValue,
   Autocomplete as MuiAutocomplete,
   AutocompleteProps as MuiAutocompleteProps,
   TextField as MuiTextField,
-} from "@mui/material";
-import { forwardRef, ReactElement, Ref } from "react";
-import { Controller, FieldValues, Path } from "react-hook-form";
+} from '@mui/material';
+import { forwardRef, ReactElement, Ref } from 'react';
+import { Controller, FieldValues, Path } from 'react-hook-form';
 
-type AutocompleteOption = {
+export type AutocompleteOption = {
   label: string;
   value: string | number;
 };
 
 type AutocompleteProps<
   T extends FieldValues,
-  Multiple extends boolean = false
+  Multiple extends boolean = false,
 > = Omit<
   MuiAutocompleteProps<AutocompleteOption, Multiple, false, false>,
-  "renderInput" | "onChange" | "options" | "multiple"
+  'renderInput' | 'onChange' | 'options' | 'multiple'
 > & {
   name: Path<T>;
   textFieldProps?: Omit<
     React.ComponentProps<typeof MuiTextField>,
-    "name" | "error" | "helperText"
+    'name' | 'error' | 'helperText'
   >;
   options: AutocompleteOption[] | undefined;
   multiple?: Multiple;
@@ -33,7 +33,7 @@ type AutocompleteProps<
     : (option: AutocompleteOption | null) => void;
 };
 
-const Autocomplete = forwardRef(
+export const Autocomplete = forwardRef(
   <T extends FieldValues, Multiple extends boolean = false>(
     {
       name,
@@ -43,7 +43,7 @@ const Autocomplete = forwardRef(
       multiple = false as Multiple,
       ...autocompleteProps
     }: AutocompleteProps<T, Multiple>,
-    ref: Ref<HTMLInputElement>
+    ref: Ref<HTMLInputElement>,
   ) => {
     const { control, readOnly } = useFormContext<T>();
 
@@ -63,7 +63,7 @@ const Autocomplete = forwardRef(
           > => {
             if (multiple) {
               return (options ?? []).filter((option) =>
-                Array.isArray(value) ? value.includes(option.value) : false
+                Array.isArray(value) ? value.includes(option.value) : false,
               ) as AutocompleteValue<
                 AutocompleteOption,
                 Multiple,
@@ -92,21 +92,21 @@ const Autocomplete = forwardRef(
               onChange={(_, newValue) => {
                 if (multiple) {
                   const values = (newValue as AutocompleteOption[]).map(
-                    (option) => option.value
+                    (option) => option.value,
                   );
                   onChange(values);
                   if (onOptionSelect) {
                     (onOptionSelect as (options: AutocompleteOption[]) => void)(
-                      newValue as AutocompleteOption[]
+                      newValue as AutocompleteOption[],
                     );
                   }
                 } else {
                   const singleValue = newValue as AutocompleteOption | null;
-                  onChange(singleValue?.value ?? "");
+                  onChange(singleValue?.value ?? '');
                   if (onOptionSelect) {
                     (
                       onOptionSelect as (
-                        option: AutocompleteOption | null
+                        option: AutocompleteOption | null,
                       ) => void
                     )(singleValue);
                   }
@@ -119,7 +119,7 @@ const Autocomplete = forwardRef(
                   inputRef={ref}
                   error={!!error}
                   helperText={error?.message}
-                  placeholder={!options ? d.defaultLoading : ""}
+                  placeholder={!options ? d.defaultLoading : ''}
                   slotProps={{
                     input: {
                       ...params.InputProps,
@@ -136,9 +136,7 @@ const Autocomplete = forwardRef(
         }}
       />
     );
-  }
+  },
 ) as <T extends FieldValues, Multiple extends boolean = false>(
-  props: AutocompleteProps<T, Multiple> & { ref?: Ref<HTMLInputElement> }
+  props: AutocompleteProps<T, Multiple> & { ref?: Ref<HTMLInputElement> },
 ) => ReactElement;
-
-export { Autocomplete, type AutocompleteOption };
