@@ -1,5 +1,5 @@
 // import { EmployeeAdditionalInfo } from "@/features/employee/additional-info/page";
-// import { EmployeeHistory } from "@/features/employee/history/page";
+import { EmployeeHistory } from '@/features/employee/history/page';
 import { EmployeePersonalInfo } from '@/features/employee/personal-info/page';
 // import { EmployeeReview } from "@/features/employee/review/page";
 // import { EmployeeSkills } from "@/features/employee/skills/page";
@@ -17,7 +17,7 @@ export const RoutesWrapper = () => {
               path='/employee/personal-info'
               element={<EmployeePersonalInfo />}
             />
-            {/*  <Route path="/employee/history" element={<EmployeeHistory />} />*/}
+            <Route path='/employee/history' element={<EmployeeHistory />} />
             {/*  <Route path="/employee/skills" element={<EmployeeSkills />} />*/}
             {/*  <Route*/}
             {/*    path="/employee/additional-info"*/}
