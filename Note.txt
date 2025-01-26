@@ -25,6 +25,7 @@ PS C:\react\react-hook-form-with-zod-complex-form-enterprise> npm install immer
 PS C:\react\react-hook-form-with-zod-complex-form-enterprise> npm install zod @hookform/resolvers
 PS C:\react\react-hook-form-with-zod-complex-form-enterprise> npm install validator
 PS C:\react\react-hook-form-with-zod-complex-form-enterprise> npm install @types/validator --save-dev
+PS C:\react\react-hook-form-with-zod-complex-form-enterprise> npm install react-number-format
 
 --------------------------
 Tech stack of the project:
