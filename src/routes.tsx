@@ -1,4 +1,4 @@
-// import { EmployeeAdditionalInfo } from "@/features/employee/additional-info/page";
+import { EmployeeAdditionalInfo } from '@/features/employee/additional-info/page';
 import { EmployeeHistory } from '@/features/employee/history/page';
 import { EmployeePersonalInfo } from '@/features/employee/personal-info/page';
 // import { EmployeeReview } from "@/features/employee/review/page";
@@ -19,10 +19,10 @@ export const RoutesWrapper = () => {
             />
             <Route path='/employee/history' element={<EmployeeHistory />} />
             <Route path='/employee/skills' element={<EmployeeSkills />} />
-            {/*  <Route*/}
-            {/*    path="/employee/additional-info"*/}
-            {/*    element={<EmployeeAdditionalInfo />}*/}
-            {/*  />*/}
+            <Route
+              path='/employee/additional-info'
+              element={<EmployeeAdditionalInfo />}
+            />
             {/*  <Route path="/employee/review" element={<EmployeeReview />} />*/}
           </Route>
         </Route>
