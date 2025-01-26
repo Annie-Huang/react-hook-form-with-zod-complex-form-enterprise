@@ -24,6 +24,7 @@ PS C:\react\react-hook-form-with-zod-complex-form-enterprise> npm install @emoti
 PS C:\react\react-hook-form-with-zod-complex-form-enterprise> npm install immer
 PS C:\react\react-hook-form-with-zod-complex-form-enterprise> npm install zod @hookform/resolvers
 PS C:\react\react-hook-form-with-zod-complex-form-enterprise> npm install validator
+PS C:\react\react-hook-form-with-zod-complex-form-enterprise> npm install @types/validator --save-dev
 
 --------------------------
 Tech stack of the project:
@@ -36,6 +37,7 @@ Tech stack of the project:
 
 Form data format - Personal Info:
 Phone Number: (555) 555-1234
+Social Security Number: 555 55 5555
 
 
 
