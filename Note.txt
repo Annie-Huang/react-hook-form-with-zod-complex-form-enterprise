@@ -51,8 +51,8 @@ In the History page,
 - PreviousEmployers component is use useFieldArray. previousEmployers must at least has 1, which I think it is wrong.
 
 In Skills page,
-- if user choose 'other' for Core Completencies, a new field of 'otherCoreCompetencies' is added into zod schema through superRefine
-- Each Skill Set has 3 level of drop down and last dropdown is multiple options selection
+- if user choose 'other' for Core Completencies, a new field of 'otherCoreCompetencies' is added into zod schema through superRefine. Core Completencies is also a multiple choice dropdown
+- Each Skill Set has 3 level of drop down and last dropdown is multiple choices dropdown
 
 
 
