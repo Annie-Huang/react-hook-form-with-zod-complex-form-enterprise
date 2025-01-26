@@ -47,7 +47,8 @@ Social Security Number: 555 55 5555
 
 In the History page,
 - if user choose 'other' for reasons for leaving previous jobs, a new field of 'otherReasonsForLeaving' is added into zod schema through superRefine
-- EducationalInstitutions component is use useFieldArray.
+- EducationalInstitutions component is use useFieldArray. educationalInstitutions must at least has 1, which I think it is wrong.
+- PreviousEmployers component is use useFieldArray. previousEmployers must at least has 1, which I think it is wrong.
 
 
 
