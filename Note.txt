@@ -52,8 +52,11 @@ In the History page,
 
 In Skills page,
 - if user choose 'other' for Core Completencies, a new field of 'otherCoreCompetencies' is added into zod schema through superRefine. Core Completencies is also a multiple choice dropdown
+- SkillSets components is use useFieldArray.
 - Each Skill Set has 3 level of drop down and last dropdown is multiple choices dropdown
 
+In Additional Info page,
+- References components is use useFieldArray.
 
 
 
