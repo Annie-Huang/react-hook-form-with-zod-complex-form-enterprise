@@ -6,7 +6,7 @@ import { CssBaseline, ThemeProvider } from '@mui/material';
 import { LocalizationProvider } from '@mui/x-date-pickers';
 import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFnsV3';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-// import { SnackbarProvider } from "notistack";
+import { SnackbarProvider } from 'notistack';
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 
@@ -24,6 +24,8 @@ createRoot(document.getElementById('root')!).render(
                 Add normalize.css to make each each browser has consistent styling with each other.
             */}
             <CssBaseline />
+            {/* Not adding SnackbarProvider also seems to work */}
+            <SnackbarProvider />
             <RoutesWrapper />
           </ConfirmProvider>
         </LocalizationProvider>

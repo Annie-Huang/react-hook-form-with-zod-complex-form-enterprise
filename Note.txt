@@ -61,3 +61,4 @@ In Additional Info page,
 - References components is use useFieldArray.
 - use MUI slider component for salary expectations
 
+Can look at devtool for all the data that submitted when you finishes all the steps of the form.
