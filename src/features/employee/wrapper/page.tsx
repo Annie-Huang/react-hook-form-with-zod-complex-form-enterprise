@@ -7,7 +7,7 @@ const Page = () => {
   return (
     <>
       {/*<SummaryDialog />*/}
-      {/*<Stepper />*/}
+      <Stepper />
       <Divider sx={{ marginY: 2 }} />
       <Outlet />
     </>
