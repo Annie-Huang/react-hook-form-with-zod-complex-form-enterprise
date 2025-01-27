@@ -1,21 +1,21 @@
-import { useEmployeeAdditionalInfoStore } from "@/features/employee/additional-info/hooks/useStore";
+import { useEmployeeAdditionalInfoStore } from '@/features/employee/additional-info/hooks/useStore';
 
-import SendOutlinedIcon from "@mui/icons-material/SendOutlined";
-import { EmployeeAdditionalInfo } from "@/features/employee/additional-info/page";
-import { useEmployeeHistoryStore } from "@/features/employee/history/hooks/useStore";
-import { EmployeeHistory } from "@/features/employee/history/page";
-import { useEmployeePersonalInfoStore } from "@/features/employee/personal-info/hooks/useStore";
-import { EmployeePersonalInfo } from "@/features/employee/personal-info/page";
-import { useEmployeeReviewStore } from "@/features/employee/review/hooks/useStore";
-import { EmployeeReview } from "@/features/employee/review/page";
-import { useEmployeeSkillsStore } from "@/features/employee/skills/hooks/useStore";
-import { EmployeeSkills } from "@/features/employee/skills/page";
-import { useCreate } from "@/features/employee/wrapper/hooks/useMutations";
-import { useStore } from "@/features/employee/wrapper/hooks/useStore";
-import { schema } from "@/features/employee/wrapper/types/schema";
-import { getErrorMessage } from "@/utils/getErrorMessage";
-import { showSnack } from "@/utils/showSnack";
-import { LoadingButton } from "@mui/lab";
+import SendOutlinedIcon from '@mui/icons-material/SendOutlined';
+import { EmployeeAdditionalInfo } from '@/features/employee/additional-info/page';
+import { useEmployeeHistoryStore } from '@/features/employee/history/hooks/useStore';
+import { EmployeeHistory } from '@/features/employee/history/page';
+import { useEmployeePersonalInfoStore } from '@/features/employee/personal-info/hooks/useStore';
+import { EmployeePersonalInfo } from '@/features/employee/personal-info/page';
+import { useEmployeeReviewStore } from '@/features/employee/review/hooks/useStore';
+import { EmployeeReview } from '@/features/employee/review/page';
+import { useEmployeeSkillsStore } from '@/features/employee/skills/hooks/useStore';
+import { EmployeeSkills } from '@/features/employee/skills/page';
+import { useCreate } from '@/features/employee/wrapper/hooks/useMutations';
+import { useStore } from '@/features/employee/wrapper/hooks/useStore';
+import { schema } from '@/features/employee/wrapper/types/schema';
+import { getErrorMessage } from '@/utils/getErrorMessage';
+import { showSnack } from '@/utils/showSnack';
+import { LoadingButton } from '@mui/lab';
 import {
   Button,
   Dialog,
@@ -23,11 +23,11 @@ import {
   DialogContent,
   DialogTitle,
   Divider,
-} from "@mui/material";
-import { FormEvent } from "react";
-import { d } from "@/utils/dictionary";
+} from '@mui/material';
+import { FormEvent } from 'react';
+import { d } from '@/utils/dictionary';
 
-const SummaryDialog = () => {
+export const SummaryDialog = () => {
   const { summaryDialogOpen, updateSummaryDialogOpen } = useStore();
   const createMutation = useCreate();
 
@@ -59,21 +59,21 @@ const SummaryDialog = () => {
       schema.parse(allFormData);
       createMutation.mutate(undefined, { onSuccess: handleClose });
     } catch (error) {
-      showSnack(getErrorMessage(error), { variant: "error" });
+      showSnack(getErrorMessage(error), { variant: 'error' });
     }
   };
 
   return (
     <Dialog
       open={summaryDialogOpen}
-      component="form"
+      component='form'
       onSubmit={onSubmit}
       fullWidth
-      maxWidth="md"
+      maxWidth='md'
       onClose={handleClose}
     >
-      <DialogTitle variant="h5">{d.confirmInformation}</DialogTitle>
-      <DialogContent sx={{ display: "flex", flexDirection: "column", gap: 3 }}>
+      <DialogTitle variant='h5'>{d.confirmInformation}</DialogTitle>
+      <DialogContent sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
         <EmployeePersonalInfo readOnly />
         <Divider />
         <EmployeeHistory readOnly />
@@ -86,13 +86,13 @@ const SummaryDialog = () => {
         <Divider />
       </DialogContent>
       <DialogActions>
-        <Button onClick={handleClose} color="inherit">
+        <Button onClick={handleClose} color='inherit'>
           {d.close}
         </Button>
         <LoadingButton
-          type="submit"
+          type='submit'
           loading={createMutation.isPending}
-          variant="contained"
+          variant='contained'
           startIcon={<SendOutlinedIcon />}
         >
           {d.submit}
@@ -101,5 +101,3 @@ const SummaryDialog = () => {
     </Dialog>
   );
 };
-
-export { SummaryDialog };
