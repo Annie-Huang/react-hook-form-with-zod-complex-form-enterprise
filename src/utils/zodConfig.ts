@@ -8,7 +8,7 @@ const formatDate = (date: Date): string => {
   });
 };
 
-const setupZodErrors = () => {
+export const setupZodErrors = () => {
   z.setErrorMap((issue, ctx) => {
     let message: string;
 
@@ -75,5 +75,3 @@ const setupZodErrors = () => {
     return { message };
   });
 };
-
-export { setupZodErrors };
