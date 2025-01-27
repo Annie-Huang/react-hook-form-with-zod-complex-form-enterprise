@@ -63,3 +63,9 @@ In Additional Info page,
 - use MUI slider component for salary expectations
 
 Can look at devtool for all the data that submitted when you finishes all the steps of the form.
+
+The reason the props can be jumped a few levels rather than pass it down one by one is that in each form (form.tsx), we use
+import { FormProvider } from 'react-hook-form';
+Then in each UI component (e.g. text-field.tsx), we can just use
+const { control, readOnly } = useFormContext<T>();
+to get all the props out of it and injest into the component.
