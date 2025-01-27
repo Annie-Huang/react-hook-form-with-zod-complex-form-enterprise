@@ -61,4 +61,3 @@ In Additional Info page,
 - use MUI slider component for salary expectations
 
 
-
