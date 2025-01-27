@@ -1,7 +1,7 @@
 import { EmployeeAdditionalInfo } from '@/features/employee/additional-info/page';
 import { EmployeeHistory } from '@/features/employee/history/page';
 import { EmployeePersonalInfo } from '@/features/employee/personal-info/page';
-// import { EmployeeReview } from "@/features/employee/review/page";
+import { EmployeeReview } from '@/features/employee/review/page';
 import { EmployeeSkills } from '@/features/employee/skills/page';
 import { EmployeeWrapper } from '@/features/employee/wrapper/page';
 import { DashboardLayout } from '@/features/layout/components/dashboard-layout';
@@ -23,7 +23,7 @@ export const RoutesWrapper = () => {
               path='/employee/additional-info'
               element={<EmployeeAdditionalInfo />}
             />
-            {/*  <Route path="/employee/review" element={<EmployeeReview />} />*/}
+            <Route path='/employee/review' element={<EmployeeReview />} />
           </Route>
         </Route>
       </Routes>
