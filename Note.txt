@@ -49,6 +49,7 @@ In the History page,
 - if user choose 'other' for reasons for leaving previous jobs, a new field of 'otherReasonsForLeaving' is added into zod schema through superRefine
 - EducationalInstitutions component is use useFieldArray. educationalInstitutions must at least has 1, which I think it is wrong.
 - PreviousEmployers component is use useFieldArray. previousEmployers must at least has 1, which I think it is wrong.
+- All the dropdown list options from this app is pretend to be fetched from backend, we create a async/await call + a wait call, Also showing you how to push into the options list.
 
 In Skills page,
 - if user choose 'other' for Core Completencies, a new field of 'otherCoreCompetencies' is added into zod schema through superRefine. Core Completencies is also a multiple choice dropdown
