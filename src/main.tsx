@@ -24,7 +24,6 @@ createRoot(document.getElementById('root')!).render(
                 Add normalize.css to make each each browser has consistent styling with each other.
             */}
             <CssBaseline />
-            {/* Not adding SnackbarProvider also seems to work */}
             <SnackbarProvider />
             <RoutesWrapper />
           </ConfirmProvider>
