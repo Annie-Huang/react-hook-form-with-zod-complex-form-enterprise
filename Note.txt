@@ -47,11 +47,19 @@ Form data format - Personal Info:
 Phone Number: (555) 555-5555
 Social Security Number: 555 55 5555
 
+In Personal info page,
+- All the dropdown list options from this app is pretend to be fetched from backend, we create a async/await call + a wait call, Also showing you how to push into the options list.
+- each schema.ts file just in charge of the rule, the error message is actually in zodConfig.ts file
+- each schems.ts file export two type: "export {schema,schema as employeePersonalInfoSchema,...}". schema will be just use within personal-info feature where as employeePersonalInfoSchema will be use outside of person-info feature
+- socialSecurityNumber has its own regex validation in zod
+- socialSecurityNumber and phoneNumber have their own masking formatting in text-field with help of 'react-number-format'
+- all numbers and currency fields apply for thousandSeparator in text-field with help of 'react-number-format'
+
 In the History page,
-- if user choose 'other' for reasons for leaving previous jobs, a new field of 'otherReasonsForLeaving' is added into zod schema through superRefine
+- if user choose 'other' for reasons for leaving previous jobs, a new field of 'otherReasonsForLeaving' is added into zod schema through superRefine in zod
+  generally for this sort of issue, you can use superRefine to add issue | discriminated unions | union
 - EducationalInstitutions component is use useFieldArray. educationalInstitutions must at least has 1, which I think it is wrong.
 - PreviousEmployers component is use useFieldArray. previousEmployers must at least has 1, which I think it is wrong.
-- All the dropdown list options from this app is pretend to be fetched from backend, we create a async/await call + a wait call, Also showing you how to push into the options list.
 
 In Skills page,
 - if user choose 'other' for Core Completencies, a new field of 'otherCoreCompetencies' is added into zod schema through superRefine. Core Completencies is also a multiple choice dropdown
@@ -62,10 +70,22 @@ In Additional Info page,
 - References components is use useFieldArray.
 - use MUI slider component for salary expectations
 
+In wrapper component,
+- the stepper.tsx will use schema of each feature to zod's safeParse on the data stored in the local storage to decide whether to show 'Invalid Form Data' underneath each step.
+- when you submit the form in summary-dialog.tsx, it will first do validation on the whole form schema that includes each step. and if you submit in the dialog while it's invalid, we will show error in notistack bar
+- summary-dialog.tsx has form fields in each step shows in the dialog in read-only mode
+
+
 Can look at devtool for all the data that submitted when you finishes all the steps of the form.
 
+-----------------------------------
+
+Technical notes:
 The reason the props can be jumped a few levels rather than pass it down one by one is that in each form (form.tsx), we use
 import { FormProvider } from 'react-hook-form';
 Then in each UI component (e.g. text-field.tsx), we can just use
 const { control, readOnly } = useFormContext<T>();
 to get all the props out of it and injest into the component.
+
+Each useFormContext is a useFormContext from 'react-hook-form' + {readOnly: boolean;};
+so that in the summmary-dialog, we can put it as read only in the modal.
