@@ -6,7 +6,7 @@ import { Outlet } from 'react-router';
 const Page = () => {
   return (
     <>
-      {/*<SummaryDialog />*/}
+      <SummaryDialog />
       <Stepper />
       <Divider sx={{ marginY: 2 }} />
       <Outlet />
